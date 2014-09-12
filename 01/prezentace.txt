@@ -1,0 +1,71 @@
+% Pascal
+% LukeMcNemee
+% 2014
+
+# Pascal 
+
+* je tu už od roku 1970
+* navržen jako jazyk určený k výuce
+* nerozlišuje velikost písmen
+* je poněkud "ukecaný"
+* jmenuje se po Blaise Pascalovi (matematik, fyzik ...)
+
+-----
+
+# České znaky
+
+* ě,é,š,č,ř,ž ...
+* nepoužívat pro názvy
+* povolené pouze jako součást textu
+* ideálně úplně vynechávat
+
+-----
+
+# Co dále nepoužívat pro názvy
+
+* mezery
+* pomlčky, podtržítka
+* čísla na prvním místě
+* ideálně pouze písmena
+* mujProgramCisloJedna
+
+-----
+
+# LukeMcNemee.eu
+
+* sekce lužánky info - Pascal
+* návod k nastavení PSPadu a pascalu doma
+* snad pravidelně obsah jednotlivých hodin
+* snad řešení jednotlivých úloh z hodin
+
+-----
+
+##Nastavení PSPadu
+
+
+## Hello World
+
+-----
+
+# Dotazník
+
+-----
+
+# Programování
+
+* Karel
+* Pascal
+* GML
+* něco jiného?
+
+-----
+
+# Matematika
+
+* funkce
+* dělení se zbytkem
+* druhá mocnina
+* faktoriál
+* obvody obsahy čtverce, obdélníku
+
+-----
