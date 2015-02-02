@@ -14,6 +14,7 @@ uses crt;
 
 var 
   vstup : String;
+  znak : char;
   i : integer;
 
 begin
@@ -32,6 +33,10 @@ begin
   end;
   
   writeln;
+  for znak:='a' to 'z' do
+  begin
+    write(znak);
+  end;
   readln; 
 end.
 
