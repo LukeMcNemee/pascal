@@ -22,7 +22,7 @@ begin
   begin
     for j := 1 to cislo do
     begin
-      if((j = 1) or (i = 1) or (j = cislo) or (i = cislo)) then
+      if((j = 1) or (i = 1) or (j = n) or (i = n)) then
 	write('#')
       else
 	write(' ');	

@@ -16,49 +16,52 @@ var
   vysledek, volba : integer;
 
 begin
-  writeln('toto je kalkulacka.');
-  writeln('zadejte 1 pro scitani');
-  writeln('zadejte 2 pro odecitani');
-  writeln('zadejte 3 pro nasobeni');
-  writeln('zadejte 4 pro deleni');
-  readln(volba);  
-  writeln('zadej dve cisla:');
-  readln(a);
-  readln(b);
+  repeat
+    writeln('toto je kalkulacka.');
+    writeln('zadejte 1 pro scitani');
+    writeln('zadejte 2 pro odecitani');
+    writeln('zadejte 3 pro nasobeni');
+    writeln('zadejte 4 pro deleni');
+    writeln('zadejte 5 pro konec');
 
-  if(volba = 1) then 
-  begin
-    vysledek := a+b;
-  end;
-  
-  if(volba = 2) then 
-  begin
-    vysledek := a-b;
-  end;
-  
-  if(volba = 3) then 
-  begin
-    vysledek := a*b;
-  end;
-  
-  if(volba = 4) then 
-  begin
-    if(b <> 0) then 
+    readln(volba);  
+    writeln('zadej dve cisla:');
+    readln(a);
+    readln(b);
+
+    if(volba = 1) then 
     begin
-      vysledek := a div b;
+      vysledek := a+b;
+    end;
+    
+    if(volba = 2) then 
+    begin
+      vysledek := a-b;
+    end;
+    
+    if(volba = 3) then 
+    begin
+      vysledek := a*b;
+    end;
+    
+    if(volba = 4) then 
+    begin
+      if(b <> 0) then 
+      begin
+	vysledek := a div b;
+      end else 
+      begin
+	writeln('nulou nelze delit');
+      end;
+    end;
+
+    if((volba > 5) or (volba < 1)) then 
+    begin
+      writeln('spatne zadani');
     end else 
     begin
-      writeln('nulou nelze delit');
+      writeln('vysledek je:');  
+      writeln(vysledek);
     end;
-  end;
-
-  if((volba > 4) or (volba < 1)) then 
-  begin
-    writeln('spatne zadani');
-  end else 
-  begin
-    writeln('vysledek je:');  
-    writeln(vysledek);
-  end;
-  readln;
+  until volba = 5;
 end.
