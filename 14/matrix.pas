@@ -3,16 +3,16 @@ program matrix;
 uses crt;
 
 const
-screen = 100;
+max = 100;
 
 var
-letter, i, rand : integer;
-previous : array[1 .. screen] of boolean;
+pismeno, i, rand : integer;
+predchozi : array[1 .. max] of boolean;
 
 begin
-  for i:= 1 to screen do
+  for i:= 1 to max do
   begin
-    previous[i] := false;
+    predchozi[i] := false;
   end;
 
   textcolor(green);
@@ -20,20 +20,20 @@ begin
   clrscr;
   randomize;
   repeat
-    for i:= 1 to screen do
+    for i:= 1 to max do
       begin      
 	rand := random(50);
-	if(((rand > 35) and previous[i] = true) or (rand > 45) and (previous[i] = false))  then
+	if(((rand > 35) and predchozi[i] = true) or (rand > 45) and (predchozi[i] = false))  then
 	begin
-	  previous[i] := not previous[i];
+	  predchozi[i] := not predchozi[i];
 	end;              
-      letter := random(50);      
-      if (previous[i] = false) then
+      pismeno := random(50);      
+      if (predchozi[i] = false) then
 	begin
 	  write(' ');	  
 	end else
 	begin	  
-          write(chr(letter + 64));
+          write(chr(pismeno + 64));
           
 	end;
       end;
