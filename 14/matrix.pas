@@ -9,14 +9,21 @@ var
 pismeno, i, rand : integer;
 predchozi : array[1 .. max] of boolean;
 
+
+
+
+
+
+
+
 begin
   for i:= 1 to max do
   begin
     predchozi[i] := false;
   end;
 
-  textcolor(green);
-  
+  textcolor(cyan);
+
   clrscr;
   randomize;
   repeat
@@ -26,18 +33,17 @@ begin
 	if(((rand > 35) and predchozi[i] = true) or (rand > 45) and (predchozi[i] = false))  then
 	begin
 	  predchozi[i] := not predchozi[i];
-	end;              
-      pismeno := random(50);      
+	end;
+      pismeno := random(50);
       if (predchozi[i] = false) then
 	begin
-	  write(' ');	  
+	  write(' ');
 	end else
-	begin	  
+	begin
           write(chr(pismeno + 64));
-          
 	end;
       end;
       writeln;
-      delay(50);
+      delay(10);
   until keypressed;
 end.
