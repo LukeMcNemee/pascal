@@ -10,13 +10,10 @@
 
 
 program pi_calc;
-
 uses crt, math;
-
 var 
 n : int64;
 uhel, pi, vnejsi, vnitrni : real;
-
 begin
   writeln('zadejte pocet stran:');
   readln(n); 
@@ -25,8 +22,6 @@ begin
   vnejsi := 2 * (sin(degtorad(uhel/2))/cos(degtorad(uhel/2)));
   vnitrni := vnitrni * n;
   vnejsi := vnejsi * n;
-  pi := (vnitrni + vnejsi)/4;
-      
+  pi := (vnitrni + vnejsi)/4;      
   writeln('pi is equal to ',pi:20:19);
-
 end.
