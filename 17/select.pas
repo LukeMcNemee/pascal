@@ -9,8 +9,8 @@
 
 program select;
 
-const 
-	LEN = 10;
+const
+	LEN = 1000;
 
 var
 	hodnoty		: array [1..LEN] of integer;
@@ -27,7 +27,6 @@ begin
 		write(hodnoty[i], ' '); 
 	end;
 	writeln;
-
 	
 	for i := 1 to LEN do
 	begin
@@ -42,7 +41,7 @@ begin
 			end;
 		end;
 
-		{prohodit}
+		{prohodit hodnoty[min] a hodnoty[i]}
 		if(min <> i) then
 		begin
 			hodnoty[min] := hodnoty[min] + hodnoty[i];
@@ -58,5 +57,6 @@ begin
 		write(hodnoty[i], ' '); 
 	end;
 	writeln;
+	readln;
 end.
 
