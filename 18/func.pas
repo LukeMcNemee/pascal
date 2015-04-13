@@ -55,7 +55,7 @@ var
     myValue, a, b : Integer;
 
 begin
-
+{
     sayHello;
 
     myValue := 1;    
@@ -68,10 +68,11 @@ begin
     writeln('1 - ',myValue);
     test2(myValue);
     writeln('4 - ',myValue);
-
+    }
     a := 1;
     b := 3;
     writeln( a, ' ', b);
+    swap( a, b);    
     swap( a, b);
     writeln( a, ' ', b);
     readln;
