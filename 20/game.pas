@@ -12,20 +12,49 @@ program game;
 uses crt;
 
 const n = 30;
-const m = 50;
+
 
         
 var
-    aktualni: array [0..m+1, 0..n+1] of boolean;
-    nove    : array [1..m, 1..n] of boolean;
+    aktualni: array [0..n+1, 0..n+1] of boolean;
+    nove    : array [1..n, 1..n] of boolean;
     i,j     : integer;
+
+
+begin
+
+    for i
+       for j 
+            aktualni[j,i] := True;
+               
+
+            
+
+
     
+
+
+
 
 function vykresli() : integer;
 var
     k,l : integer;
 
 begin
+    for k {doplnit}
+    begin
+        for l {doplnit}
+        begin
+            if(aktualni[L,K]) then
+                write( ...) {doplnit}
+            else
+                write( ...);{doplnit}
+        end;
+        writeln();
+    end;
+end;
+
+
     for k := 1 to n do
     begin
         for l := 1 to m do
@@ -104,7 +133,7 @@ begin
         for j := 0 to m+1 do
         begin
             if(random(10) > 7) then
-                aktualni[j,i] := true 
+                aktualni[j,i] := true
             else
                 aktualni[j,i] := false;
         end;
