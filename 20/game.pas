@@ -146,7 +146,7 @@ end;
 begin
     edit();
     randomize;
-    {
+    
     for i := 0 to n+1 do
     begin
         for j := 0 to m+1 do
@@ -157,7 +157,7 @@ begin
                 aktualni[j,i] := false;
         end;
     end;
-    }
+    
     repeat
         vykresli();
     
