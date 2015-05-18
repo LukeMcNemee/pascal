@@ -113,7 +113,7 @@ begin
             if(aktualni[l+1,k-1]) then
                sousedi := sousedi + 1;
 
-            {write(sousedi, ' ');}
+            
             case sousedi of
                 0 .. 1  : nove[l,k] := false;
                 2       : nove[l,k] := aktualni[l,k];
@@ -122,7 +122,7 @@ begin
             end;
             
         end;
-        {writeln();}
+        
     end;
 end;
 
@@ -144,9 +144,7 @@ end;
 
 
 begin
-    edit();
     randomize;
-    {
     for i := 0 to n+1 do
     begin
         for j := 0 to m+1 do
@@ -157,20 +155,12 @@ begin
                 aktualni[j,i] := false;
         end;
     end;
-    }
+
     repeat
         vykresli();
-    
         novaGenerace();
         copy();
-        
-        
+
         delay(100);
-
-        
     until keypressed;
-    
-        
-
-    
-end.    
+end.
