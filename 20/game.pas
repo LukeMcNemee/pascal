@@ -39,7 +39,7 @@ begin
 end;
 
     
-function edit() : integer;
+function edituj() : integer;
 var 
     key : char = #0;
     x,y : integer;
@@ -48,15 +48,12 @@ begin
     x := 1;
     y := 1;
     repeat
-        
         delay(50);
         clrscr;
         key := #0;
         if keypressed then
         begin
-
             key := readKey;
-            
         end;
 
         case key of
@@ -69,17 +66,6 @@ begin
         vykresli();
         gotoxy(x,y);
         write('X');
-        
-{
-        case key of
-            #75 : writeln('left');
-            #72 : writeln('up');
-            #77 : writeln('right');
-            #80 : writeln('down');
-            #13 : writeln('enter');
-        end;
-}
-
     until key = #27;
 end;
 
@@ -144,9 +130,9 @@ end;
 
 
 begin
-    edit();
+    edituj();
     randomize;
-    {
+    
     for i := 0 to n+1 do
     begin
         for j := 0 to m+1 do
@@ -157,7 +143,7 @@ begin
                 aktualni[j,i] := false;
         end;
     end;
-    }
+    
     repeat
         vykresli();
     
