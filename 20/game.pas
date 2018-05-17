@@ -19,6 +19,7 @@ var
     aktualni: array [0..m+1, 0..n+1] of boolean;
     nove    : array [1..m, 1..n] of boolean;
     i,j     : integer;
+    pravidla, start: integer;
 
 function vykresli() : integer;
 var
@@ -99,14 +100,27 @@ begin
             if(aktualni[l+1,k-1]) then
                sousedi := sousedi + 1;
 
-            {write(sousedi, ' ');}
-            case sousedi of
-                0 .. 1  : nove[l,k] := false;
-                2       : nove[l,k] := aktualni[l,k];
-                3       : nove[l,k] := true;
-                4 .. 9  : nove[l,k] := false;
+            case pravidla of
+                1 : begin
+                        {write(sousedi, ' ');}
+                        case sousedi of
+                            0 .. 1  : nove[l,k] := false;
+                            2       : nove[l,k] := aktualni[l,k];
+                            3       : nove[l,k] := true;
+                            4 .. 9  : nove[l,k] := false;
+                        end;
+                    end;
+                2 : begin
+                        {write(sousedi, ' ');}
+                        case sousedi of
+                            0 .. 1  : nove[l,k] := false;
+                            2       : nove[l,k] := aktualni[l,k];
+                            3       : nove[l,k] := true;
+                            4 .. 9  : nove[l,k] := false;
+                        end;
+                    end;
             end;
-            
+
         end;
         {writeln();}
     end;
@@ -130,33 +144,47 @@ end;
 
 
 begin
-    edituj();
-    randomize;
-    
-    for i := 0 to n+1 do
+    writeln('Vítejte, vyberte si sadu pravidel:');
+    writeln('1 : game of life');
+    writeln('2 : high life');
+    writeln('3 : bludiste');
+    writeln('4 : vlocky');
+    readln(pravidla);
+
+    clrscr;
+    writeln('Chcete náhodný začátek, nebo editaci?');
+    writeln('1 - náhodně');
+    writeln('2 - editace');
+    readln(start);
+    if(start = 1)then
     begin
-        for j := 0 to m+1 do
+        randomize;
+
+        for i := 0 to n+1 do
         begin
-            if(random(10) > 7) then
-                aktualni[j,i] := true 
-            else
-                aktualni[j,i] := false;
+            for j := 0 to m+1 do
+            begin
+                if(random(10) > 7) then
+                    aktualni[j,i] := true 
+                else
+                    aktualni[j,i] := false;
+            end;
         end;
+    end else
+    begin
+        edituj();
     end;
+
     
     repeat
         vykresli();
-    
+
         novaGenerace();
         copy();
-        
-        
+
         delay(100);
 
-        
-    until keypressed;
-    
-        
 
-    
-end.    
+    until keypressed;
+
+end.
